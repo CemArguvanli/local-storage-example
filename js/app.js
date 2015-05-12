@@ -47,7 +47,26 @@ $(document).ready(function() {
 	// Remove item
 	$('#removeme').on('click', function() {
 		localStorage.removeItem("person");
+		localStorage.removeItem("age");
+		localStorage.removeItem("gender");
 	});
 
+	// Clear All
+	$('#clearme').on('click', function() {
+		localStorage.clear();
+	});	
+
+	// Basic test for storage in browser
+	if (typeof(localStorage) == 'undefined') {
+		alert('Local storage is not supported');
+	}else{
+		try{
+			localStorage.getItem("person", name);
+		}catch(e){
+			if (e == QUOTA_EXCEEDED_ERR) {
+				alert('Quota exeeded!'); // Date not saved
+			}
+		}
+	}
 
 });
