@@ -5,13 +5,25 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Local Storage Example</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/app.js"></script>
 </head>
 <body>
 	<form id="storeme" method="get">
-	<label for="name">Name</label>
-	<input type="text" name="name" value="" placeholder="Cem Arguvanlı">
+		<label for="name">Name</label>
+		<input type="text" name="name" value="" placeholder="Cem Arguvanlı">
 
-	<input type="submit" name="" value="Store Me!">
+		<label for="age">age</label>
+		<input type="number" name="age" id="age" value="" placeholder="Cem Arguvanlı">
+
+		<label>Gender</label>
+		<label><input type="radio" name="gender" value="male"> Male </label>
+		<label><input type="radio" name="gender" value="female"> Female </label>
+		
+
+		<input type="submit" name="" value="Store Me!">
 	</form>
+
+	<button id="removeme">Remove Item</button>
+	<span id="showme"></span>
 </body>
 </html>
